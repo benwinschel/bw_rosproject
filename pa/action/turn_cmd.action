@@ -1,0 +1,8 @@
+# Define the goal
+int32 angle
+---
+# Define the result
+float32 total_turn_angle
+---
+# Define a feedback message
+float32 current_turn_angle

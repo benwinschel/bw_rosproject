@@ -1,0 +1,7 @@
+<launch>
+  <node name="consoleNode" pkg="pa" type="consoleNode.py" output="screen" />
+	<node name="mainNode" pkg="pa" type="mainNode.py" output="screen" />
+	<node name="cmd_server" pkg="pa" type="cmd_server.py" output="screen" />
+	<node name="actionServer" pkg="pa" type="actionServer.py" output="screen" />
+
+</launch>
