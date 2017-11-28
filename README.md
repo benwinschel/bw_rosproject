@@ -2,7 +2,7 @@
 Ben Winschel ROS Programming Assignment
 
 # Instructions to Run:
-Go into your __catkin_ws__ and run ```catkin_create_pkg pa rospy```. Download the source code and place the contents of the pa folder into the src subfolder of your pa package in your __catkin_ws__. Then run ```catkin_make``` and then ```roslaunch pa pa.launch```. Commands such as _turn 45_ are acceptable. If no angle is supplied, an error will be thrown. Can be run with Gazebo to illustrate performance.
+Download the source code and place the pa folder into your __catkin_ws/src__. Go into __pa/src__ and run ```chmod +x *```, otherwise ROS will throw a launch error. Then run ```catkin_make``` and then ```roslaunch pa pa.launch```. Commands such as _turn 45_ are acceptable. If no angle is supplied, an error will be thrown. Can be run with Gazebo to illustrate performance.
 
 # Key Ideas:
 The consoleNode simply captures raw input from the terminal and publishes it to a ROS topic. An interesting problem I had was that when I tried to shutdown, the main node would block, waiting for console input, so it would never terminate gracefully. I had to include ```signal.signal(signal.SIGINT, handler)``` so that it would capture the termination command and use the exit handler to exit gracefully.
