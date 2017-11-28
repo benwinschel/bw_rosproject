@@ -61,7 +61,7 @@ def main():
 	feedback_sub = rospy.Subscriber('/cmd_action/feedback', turn_cmdActionFeedback, feedback)
 	result_sub = rospy.Subscriber('/cmd_action/result', turn_cmdActionResult, result)
 	rospy.init_node('mainNode')
-	rate = rospy.Rate(5)
+	rate = rospy.Rate(1)
 	rospy.spin()
 
 
